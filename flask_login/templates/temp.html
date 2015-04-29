@@ -1,0 +1,16 @@
+<html>
+<title>        </title>
+<h1>EdGE Employees</h1>
+<body bgcolor="#FFE4C4"></body>
+<form action="{{ url_for('details') }}" method="post">
+<!--<p>{{ opp }}</p>-->
+<p>ENTER NAME*              :    <input type="text"  name="username"      maxlength="32"></p>
+<p>ENTER DESIGNATION*       :    <input type="text"  name="designation"   maxlength="18"></p>
+<p>ENTER E-MAIL ID*         :    <input type="text"  name="email-id"      maxlength="250"></p>
+<p>ENTER CONTACT NUMBER*    :    <input type="text"  name="contact"       maxlength="10"></p>
+<p>ENTER EMP-ID*            :    <input type="text"  name="emp-id"        maxlength="18"></p>
+
+<input type="submit" value="Register" name="Submit">
+
+</form>
+</html>

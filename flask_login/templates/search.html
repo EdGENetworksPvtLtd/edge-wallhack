@@ -1,0 +1,83 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+    function validate()
+    {
+        alert("Success")
+//        var a = document.getElementById("name").value;
+//        var b = document.getElementById("desig").value;
+//        var c = document.getElementById("email").value;
+//        var d = document.getElementById("cont").value;
+//        var e = document.getElementById("emp").value;
+//        var name=   $('#name').val();
+//        var desig=  $('#desig').val();
+//        var email=  $('#email').val();
+//        var cont=   $('#cont').val();
+//        var emp=    $('#emp').val();
+        $("#contact").click(function() {
+    var selected = $(this).html();
+    alert(selected);
+});
+//         var name=$('input:text[name=Bharath]').val();
+
+        $.ajax
+            ({
+       type: "POST",
+        url: "/",
+                contentType: "application/json",
+                dataType: 'json',
+        data:JSON.stringify
+        (
+                {
+                    username:name
+//                    designation:desig,
+//                    email:email,
+//                    contact:cont,
+//                    emp:emp
+                }
+        ),
+                success: function()
+       {
+                alert('success');
+       }
+            });
+        console.log(contact)
+
+    }
+</script>
+<html>
+<head>
+<title> Google </title>
+<h2> Edge Search</h2>
+<body bgcolor="#FFE4C4"></body>
+<form action="{{url_for('data')}}" method="POST">
+
+    <p> Search <input id="contact" type="text" name="username" maxlength="100"></p>
+
+    <p><input type="submit" value="submit" name="search" onclick="validate()"></p>
+
+</form>
+
+</head>
+</html>
+
+
+
+<!--<html>-->
+<!--<head></head>-->
+<!--<body>-->
+<!--<form method="get" name="searchform" action="http://www.google.com/search" target="_blank">-->
+    <!--<input type="hidden" name="sitesearch" value="stackoverflow.com">-->
+    <!--<input type="text" name="as_q" size="20" value="Search stackoverflow.com">-->
+    <!--<input type="submit" value="Search" title="Search">-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
